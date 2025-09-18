@@ -1,0 +1,195 @@
+name: 🐛 Bug Report
+description: Report a bug in the Pinch iOS app
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report for the Pinch iOS app!
+        
+        Please provide as much detail as possible to help us understand and reproduce the issue.
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Prerequisites
+      description: Please confirm the following before submitting your bug report
+      options:
+        - label: I have searched the existing issues to make sure this bug hasn't been reported yet
+          required: true
+        - label: I can reproduce this bug consistently
+          required: true
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is
+      placeholder: Describe the bug you encountered...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Please provide detailed steps to reproduce the behavior
+      placeholder: |
+        1. Open the app
+        2. Navigate to...
+        3. Tap on...
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: A clear and concise description of what you expected to happen
+      placeholder: What should have happened instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: A clear and concise description of what actually happened
+      placeholder: What actually happened?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: device-type
+    attributes:
+      label: Device Type
+      description: What type of device are you using?
+      options:
+        - iPhone
+        - iPad
+        - iPhone Simulator
+        - iPad Simulator
+    validations:
+      required: true
+
+  - type: input
+    id: device-model
+    attributes:
+      label: Device Model
+      description: Specific device model (e.g., iPhone 15 Pro, iPad Air 5th gen)
+      placeholder: iPhone 15 Pro
+    validations:
+      required: true
+
+  - type: dropdown
+    id: ios-version
+    attributes:
+      label: iOS Version
+      description: What version of iOS are you running?
+      options:
+        - iOS 18.0
+        - iOS 17.6
+        - iOS 17.5
+        - iOS 17.4
+        - iOS 17.3
+        - iOS 17.2
+        - iOS 17.1
+        - iOS 17.0
+        - iOS 16.7
+        - iOS 16.6
+        - iOS 16.5
+        - iOS 16.4
+        - iOS 16.3
+        - iOS 16.2
+        - iOS 16.1
+        - iOS 16.0
+        - Other (please specify in additional context)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: xcode-version
+    attributes:
+      label: Xcode Version (if applicable)
+      description: What version of Xcode are you using to build the app?
+      options:
+        - Xcode 16.0
+        - Xcode 15.4
+        - Xcode 15.3
+        - Xcode 15.2
+        - Xcode 15.1
+        - Xcode 15.0
+        - Xcode 14.3
+        - Xcode 14.2
+        - Xcode 14.1
+        - Xcode 14.0
+        - Other (please specify in additional context)
+        - Not applicable (using pre-built app)
+
+  - type: dropdown
+    id: bug-area
+    attributes:
+      label: Bug Area
+      description: Which area of the app is affected?
+      options:
+        - Pinch/Zoom Gestures
+        - Image Display
+        - Navigation
+        - User Interface
+        - Performance
+        - Animations
+        - Image Drawer/Thumbnails
+        - Info Panel
+        - Controls
+        - App Launch/Initialization
+        - Other (please specify in additional context)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How severe is this bug?
+      options:
+        - Critical (App crashes or is unusable)
+        - High (Major functionality broken)
+        - Medium (Some functionality affected)
+        - Low (Minor issue or cosmetic)
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots/Videos
+      description: If applicable, add screenshots or videos to help explain your problem
+      placeholder: Drag and drop images/videos here or paste URLs
+
+  - type: textarea
+    id: console-logs
+    attributes:
+      label: Console Logs
+      description: If applicable, paste any relevant console logs or error messages
+      placeholder: Paste console output here...
+      render: shell
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context about the problem here
+      placeholder: Any additional information that might be helpful...
+
+  - type: dropdown
+    id: willingness-to-contribute
+    attributes:
+      label: Willingness to Contribute
+      description: Are you willing to help fix this bug?
+      options:
+        - "Yes, I'd like to work on this"
+        - "Yes, I can help with testing"
+        - "No, but I'm happy to provide more info if needed"
+        - "Not sure"
